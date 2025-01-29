@@ -1,6 +1,6 @@
 # waystation-ai
 
-## Local Install
+## Local Setup
 
 1. Start Strapi backend
 
@@ -20,16 +20,57 @@ echo "OPENAI_API_KEY=<your-openai-api-key>" >> .env.local
 ```
 
 
-3. Create Strapi account and import data
+3. Naviate to Strapi
 
 * Navigate to http://localhost:1337/admin
-* Strapi ask to create super-admin user, create a local super admin
+* Strapi ask to create super-admin user, go ahead and create a local super admin
 * Import seed data
 
 ```
 cd backend
 npm run strapi import -- --file ../seed-data.tar.gz
 ```
+
+* Test your API, open a browser tab and open [this URL](http://localhost:1337/api/rfqs?populate[quotes][populate][supplier]=*), you should see an API JSON response for RFQs
+
+```
+{
+  "data": [
+    {
+      "id": 9,
+      "documentId": "ywo4o0fqk01sxlzqjzbigflk",
+      "dueDate": "2025-01-30",
+      "requiredAmount": "1000",
+      "createdAt": "2025-01-27T23:36:08.441Z",
+      "updatedAt": "2025-01-28T19:50:31.762Z",
+      "publishedAt": "2025-01-28T19:50:31.769Z",
+      "locale": null,
+      "title": "Almonds",
+      "shipToAddress": "123 Mariposa Dr",
+      "quotes": [
+        {
+          "id": 13,
+  ...        
+```
+
+4. Navigate to Website
+
+* Website should launch at http://localhost:3000
+* Press `Login` on top-right corner
+* Follow Don't have an account? `Sign Up` link
+* Create a test user
+* Login with your test user's credentials
+* Navigate to dashboard
+* Click the RFQs link on the dahsboards sidebar
+* You should see a single RFQ in the list "Almonds"
+
+5. Troubleshooting
+
+Strapi is finicky with entity permissions. If permissions were not correctly seeded, go to 
+
+* Strapi admin >  Settings > Users & Permissions Plugin > Roles
+* Go through all objects and the easiest is to permit all operations per entity, and Save
+
 
 ## Extraction
 
