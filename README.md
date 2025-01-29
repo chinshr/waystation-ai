@@ -1,5 +1,7 @@
 # waystation-ai
 
+![image info](./frontend/docs/images/waystation-ai-rfq-quotes.png)
+
 ## Local Setup
 
 1. Start Strapi backend
