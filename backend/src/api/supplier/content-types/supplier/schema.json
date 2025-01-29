@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "suppliers",
+  "info": {
+    "singularName": "supplier",
+    "pluralName": "suppliers",
+    "displayName": "Supplier",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "contact": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "terms": {
+      "type": "text"
+    },
+    "hq": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::quote.quote",
+      "mappedBy": "supplier"
+    }
+  }
+}

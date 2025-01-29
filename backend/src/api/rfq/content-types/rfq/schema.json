@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rfqs",
+  "info": {
+    "singularName": "rfq",
+    "pluralName": "rfqs",
+    "displayName": "RFQ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "dueDate": {
+      "type": "date"
+    },
+    "requiredAmount": {
+      "type": "biginteger"
+    },
+    "quotes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::quote.quote"
+    },
+    "shipToAddress": {
+      "type": "string"
+    }
+  }
+}
