@@ -1,6 +1,8 @@
 # waystation-ai
 
-![image info](./frontend/docs/images/waystation-ai-rfq-quotes.png)
+![image rfq](./frontend/docs/images/waystation-ai-rfq-quotes.png)
+
+![image summary](./frontend/docs/images/waystation-ai-summary.png)
 
 ## Local Setup
 
