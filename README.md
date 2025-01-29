@@ -20,10 +20,10 @@ echo "OPENAI_API_KEY=<your-openai-api-key>" >> .env.local
 ```
 
 
-3. Naviate to Strapi
+3. Navigate to Strapi
 
 * Navigate to http://localhost:1337/admin
-* Strapi ask to create super-admin user, go ahead and create a local super admin
+* Strapi asks to create a super-admin user, go ahead and create a local super admin
 * Import seed data
 
 ```
